@@ -1,0 +1,147 @@
+---
+title: "Reunião Semanal de O&M"
+subtitle: "Companhia Mato-Grossense de Gás – MTGÁS"
+lang: pt-BR
+format:
+  revealjs:
+    title-slide: false
+---
+
+## {#capa .hero-slide}
+
+<div class="hero-brand"><img src="assets/logo-om.svg" alt="MTGÁS Operação e Manutenção"></div>
+
+<div class="hero-grid">
+  <div>
+    <div class="eyebrow">Reunião semanal · Operação & Manutenção</div>
+    <div class="pill pill-amber" style="margin-bottom:18px" data-bind="meta.dataStatus">—</div>
+    <div class="hero-title">Segurança.<br>Execução.<br>Próximos passos.</div>
+    <div class="hero-subtitle">Ritual semanal para alinhar a equipe, tratar riscos, acompanhar a execução e antecipar as demandas do Sistema de Distribuição de Gás Natural.</div>
+  </div>
+  <div class="hero-side">
+    <div class="hero-info"><div class="label">Semana</div><div class="value" data-bind="meta.week">—</div></div>
+    <div class="hero-info"><div class="label">Período</div><div class="value" data-bind="meta.period">—</div></div>
+    <div class="hero-info"><div class="label">Condução</div><div class="value" data-bind="meta.facilitator">—</div></div>
+  </div>
+</div>
+
+## {#seguranca}
+
+<div class="deck-header"><div class="brand-lockup"><img src="assets/logo-om.svg" alt="MTGÁS O&M"></div><div class="header-meta"><div class="week" data-bind="meta.week">—</div><div class="period" data-bind="meta.period">—</div></div></div>
+<div class="section-title"><div><div class="section-kicker">01 · Segurança</div><h2>Conversa de segurança</h2></div><div class="line"></div></div>
+
+<div class="safety-hero">
+  <div class="safety-theme">
+    <div class="section-kicker">Tema da semana</div>
+    <div class="big" data-bind="safety.theme">—</div>
+    <div class="desc" data-bind="safety.description">—</div>
+    <div class="callout mt-22"><strong>Mensagem-chave:</strong> <span data-bind="safety.keyMessage">—</span></div>
+  </div>
+  <div class="card"><div class="card-title"><h3>Alertas para a semana</h3><small>Antes de iniciar as atividades</small></div><ul class="alert-list" id="safety-alerts"></ul></div>
+</div>
+
+<div class="grid grid-4 mt-18">
+  <div class="metric-card good"><div class="metric-label">Acidentes</div><div class="metric-value" data-bind="safety.metrics.accidents">0</div><div class="metric-note">desde a última reunião</div></div>
+  <div class="metric-card info"><div class="metric-label">Incidentes</div><div class="metric-value" data-bind="safety.metrics.incidents">0</div><div class="metric-note">registrados</div></div>
+  <div class="metric-card warn"><div class="metric-label">Quase acidentes</div><div class="metric-value" data-bind="safety.metrics.nearMisses">0</div><div class="metric-note">para aprendizado</div></div>
+  <div class="metric-card info"><div class="metric-label">Condições inseguras</div><div class="metric-value" data-bind="safety.metrics.unsafeConditions">0</div><div class="metric-note">identificadas</div></div>
+</div>
+
+## {#semana-anterior}
+
+<div class="deck-header"><div class="brand-lockup"><img src="assets/logo-om.svg" alt="MTGÁS O&M"></div><div class="header-meta"><div class="week" data-bind="meta.week">—</div><div class="period" data-bind="meta.period">—</div></div></div>
+<div class="section-title"><div><div class="section-kicker">02 · Execução</div><h2>Semana anterior</h2></div><div class="line"></div></div>
+
+<div class="grid grid-4">
+  <div class="metric-card info"><div class="metric-label">Programadas</div><div class="metric-value" data-bind="previous.programmed">—</div><div class="metric-note">atividades</div></div>
+  <div class="metric-card good"><div class="metric-label">Concluídas</div><div class="metric-value" data-bind="previous.completed">—</div><div class="metric-note">atividades</div></div>
+  <div class="metric-card warn"><div class="metric-label">Reprogramadas</div><div class="metric-value" data-bind="previous.rescheduled">—</div><div class="metric-note">atividades</div></div>
+  <div class="metric-card good"><div class="metric-label">Cumprimento</div><div class="metric-value"><span data-bind="previous.compliance">—</span>%</div><div class="metric-note">planejado × realizado</div></div>
+</div>
+<div class="card progress-block mt-18"><div class="progress-label"><span>Avanço da programação semanal</span><strong><span data-bind="previous.compliance">—</span>%</strong></div><div class="bar"><span id="previous-progress"></span></div></div>
+<div class="table-wrap mt-18"><table class="om-table"><thead><tr><th>Atividade</th><th>Ativo / Local</th><th>Responsável</th><th>Situação</th><th>Observação</th></tr></thead><tbody id="previous-table"></tbody></table></div>
+
+## {#anomalias}
+
+<div class="deck-header"><div class="brand-lockup"><img src="assets/logo-om.svg" alt="MTGÁS O&M"></div><div class="header-meta"><div class="week" data-bind="meta.week">—</div><div class="period" data-bind="meta.period">—</div></div></div>
+<div class="section-title"><div><div class="section-kicker">03 · Integridade</div><h2>Ocorrências e anomalias</h2></div><div class="line"></div></div>
+<div class="grid grid-4">
+  <div class="metric-card danger"><div class="metric-label">P1 · Crítica</div><div class="metric-value" id="count-p1">0</div><div class="metric-note">ação imediata</div></div>
+  <div class="metric-card warn"><div class="metric-label">P2 · Alta</div><div class="metric-value" id="count-p2">0</div><div class="metric-note">prioridade</div></div>
+  <div class="metric-card good"><div class="metric-label">P3 · Moderada</div><div class="metric-value" id="count-p3">0</div><div class="metric-note">programável</div></div>
+  <div class="metric-card info"><div class="metric-label">P4 · Baixa</div><div class="metric-value" id="count-p4">0</div><div class="metric-note">acompanhamento</div></div>
+</div>
+<div class="table-wrap mt-18"><table class="om-table"><thead><tr><th>Pri.</th><th>Ocorrência / Anomalia</th><th>Ativo / Local</th><th>Situação atual</th><th>Próxima ação</th><th>Responsável</th></tr></thead><tbody id="anomaly-table"></tbody></table></div>
+
+## {#programacao}
+
+<div class="deck-header"><div class="brand-lockup"><img src="assets/logo-om.svg" alt="MTGÁS O&M"></div><div class="header-meta"><div class="week" data-bind="meta.week">—</div><div class="period" data-bind="meta.period">—</div></div></div>
+<div class="section-title"><div><div class="section-kicker">04 · Planejamento</div><h2>Programação da semana</h2></div><div class="line"></div></div>
+<div class="grid grid-3">
+  <div class="metric-card info"><div class="metric-label">Planejadas</div><div class="metric-value" id="schedule-total">0</div><div class="metric-note">atividades da semana</div></div>
+  <div class="metric-card warn"><div class="metric-label">Críticas</div><div class="metric-value" id="schedule-critical">0</div><div class="metric-note">requerem atenção adicional</div></div>
+  <div class="metric-card good"><div class="metric-label">Com responsável</div><div class="metric-value" id="schedule-owned">0</div><div class="metric-note">responsabilidade definida</div></div>
+</div>
+<div class="table-wrap mt-18"><table class="om-table"><thead><tr><th>Data</th><th>Atividade</th><th>Tipo</th><th>Ativo / Local</th><th>Responsável</th><th>Status</th></tr></thead><tbody id="schedule-table"></tbody></table></div>
+
+## {#preventivas}
+
+<div class="deck-header"><div class="brand-lockup"><img src="assets/logo-om.svg" alt="MTGÁS O&M"></div><div class="header-meta"><div class="week" data-bind="meta.week">—</div><div class="period" data-bind="meta.period">—</div></div></div>
+<div class="section-title"><div><div class="section-kicker">05 · Confiabilidade</div><h2>Preventivas, calibrações e inspeções</h2></div><div class="line"></div></div>
+<div class="grid grid-4">
+  <div class="metric-card good"><div class="metric-label">Preventivas vencidas</div><div class="metric-value" data-bind="maintenance.preventiveOverdue">0</div><div class="metric-note">backlog vencido</div></div>
+  <div class="metric-card good"><div class="metric-label">Calibrações vencidas</div><div class="metric-value" data-bind="maintenance.calibrationOverdue">0</div><div class="metric-note">instrumentação</div></div>
+  <div class="metric-card info"><div class="metric-label">Vencem em 30 dias</div><div class="metric-value" data-bind="maintenance.due30">0</div><div class="metric-note">planejar recursos</div></div>
+  <div class="metric-card info"><div class="metric-label">Inspeções previstas</div><div class="metric-value" data-bind="maintenance.inspections">0</div><div class="metric-note">semana atual</div></div>
+</div>
+<div class="table-wrap mt-18"><table class="om-table"><thead><tr><th>Ativo / Equipamento</th><th>Serviço</th><th>Prazo</th><th>Situação</th><th>Responsável</th></tr></thead><tbody id="maintenance-table"></tbody></table></div>
+
+## {#materiais}
+
+<div class="deck-header"><div class="brand-lockup"><img src="assets/logo-om.svg" alt="MTGÁS O&M"></div><div class="header-meta"><div class="week" data-bind="meta.week">—</div><div class="period" data-bind="meta.period">—</div></div></div>
+<div class="section-title"><div><div class="section-kicker">06 · Recursos</div><h2>Materiais, sobressalentes e terceiros</h2></div><div class="line"></div></div>
+<div class="grid grid-2">
+  <div class="card"><div class="card-title"><h3>Sobressalentes / materiais</h3><small>Itens que podem limitar a execução</small></div><div class="table-wrap"><table class="om-table"><thead><tr><th>Item</th><th>Necessidade</th><th>Situação</th></tr></thead><tbody id="materials-table"></tbody></table></div></div>
+  <div class="card"><div class="card-title"><h3>Serviços de terceiros</h3><small>Contratos, OS e mobilizações</small></div><div class="table-wrap"><table class="om-table"><thead><tr><th>Demanda</th><th>Próxima ação</th><th>Responsável</th></tr></thead><tbody id="thirdparty-table"></tbody></table></div></div>
+</div>
+
+## {#lookahead}
+
+<div class="deck-header"><div class="brand-lockup"><img src="assets/logo-om.svg" alt="MTGÁS O&M"></div><div class="header-meta"><div class="week" data-bind="meta.week">—</div><div class="period" data-bind="meta.period">—</div></div></div>
+<div class="section-title"><div><div class="section-kicker">07 · Antecipação</div><h2>Look Ahead · 30 / 60 / 90 dias</h2></div><div class="line"></div></div>
+<div class="lookahead">
+  <div class="look-card"><div class="days">Próximos</div><div class="horizon">30 dias</div><ul class="look-list" id="look-30"></ul></div>
+  <div class="look-card"><div class="days">Horizonte</div><div class="horizon">60 dias</div><ul class="look-list" id="look-60"></ul></div>
+  <div class="look-card"><div class="days">Horizonte</div><div class="horizon">90 dias</div><ul class="look-list" id="look-90"></ul></div>
+</div>
+
+## {#indicadores}
+
+<div class="deck-header"><div class="brand-lockup"><img src="assets/logo-om.svg" alt="MTGÁS O&M"></div><div class="header-meta"><div class="week" data-bind="meta.week">—</div><div class="period" data-bind="meta.period">—</div></div></div>
+<div class="section-title"><div><div class="section-kicker">08 · Gestão</div><h2>Painel O&M</h2></div><div class="line"></div></div>
+<div class="grid grid-4">
+  <div class="metric-card good"><div class="metric-label">Disponibilidade</div><div class="metric-value"><span data-bind="indicators.availability">—</span>%</div><div class="metric-note">sistema / período</div></div>
+  <div class="metric-card good"><div class="metric-label">Cumprimento semanal</div><div class="metric-value"><span data-bind="previous.compliance">—</span>%</div><div class="metric-note">programação</div></div>
+  <div class="metric-card warn"><div class="metric-label">Anomalias abertas</div><div class="metric-value" id="anomalies-open">0</div><div class="metric-note">todas as prioridades</div></div>
+  <div class="metric-card danger"><div class="metric-label">P1 + P2</div><div class="metric-value" id="high-priority-open">0</div><div class="metric-note">atenção gerencial</div></div>
+</div>
+<div class="grid grid-2 mt-18">
+  <div class="card progress-block"><div class="progress-label"><span>Programação executada</span><strong><span data-bind="previous.compliance">—</span>%</strong></div><div class="bar"><span id="indicator-compliance"></span></div></div>
+  <div class="card progress-block"><div class="progress-label"><span>Disponibilidade operacional</span><strong><span data-bind="indicators.availability">—</span>%</strong></div><div class="bar"><span id="indicator-availability"></span></div></div>
+</div>
+<div class="callout mt-18"><strong>Foco da semana:</strong> <span data-bind="indicators.weekFocus">—</span></div>
+
+## {#pendencias}
+
+<div class="deck-header"><div class="brand-lockup"><img src="assets/logo-om.svg" alt="MTGÁS O&M"></div><div class="header-meta"><div class="week" data-bind="meta.week">—</div><div class="period" data-bind="meta.period">—</div></div></div>
+<div class="section-title"><div><div class="section-kicker">09 · Compromissos</div><h2>Pendências e plano de ação</h2></div><div class="line"></div></div>
+<div class="table-wrap"><table class="om-table"><thead><tr><th>#</th><th>Pendência / Ação</th><th>Responsável</th><th>Prazo</th><th>Prioridade</th><th>Status</th></tr></thead><tbody id="actions-table"></tbody></table></div>
+<div class="callout mt-18"><strong>Regra:</strong> toda ação aberta permanece no quadro semanal até sua conclusão ou reprogramação formal.</div>
+
+## {#encerramento}
+
+<div class="hero-brand"><img src="assets/logo-om.svg" alt="MTGÁS Operação e Manutenção"></div>
+<div class="closing">
+  <div><div class="eyebrow">Encerramento</div><h2>Clareza sobre riscos.<br>Responsabilidade sobre ações.</h2><p>Ao final da reunião, cada atividade crítica deve ter responsável, prazo e próximo passo definidos.</p></div>
+  <div class="next-box"><div class="label">Próxima reunião</div><div class="date" data-bind="closing.nextMeetingDate">—</div><div class="time" data-bind="closing.nextMeetingTime">—</div><div class="small-note mt-18">Local: <span data-bind="closing.location">—</span></div></div>
+</div>
