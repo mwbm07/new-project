@@ -1,0 +1,35 @@
+project:
+  type: default
+  output-dir: _site
+  resources:
+    - assets/**
+    - data/**
+    - scripts/**
+
+format:
+  revealjs:
+    theme: default
+    css: styles.css
+    width: 1600
+    height: 900
+    margin: 0.045
+    center: false
+    transition: fade
+    background-transition: fade
+    slide-number: c/t
+    show-slide-number: all
+    controls: true
+    controls-layout: bottom-right
+    progress: true
+    history: true
+    hash: true
+    navigation-mode: linear
+    touch: true
+    overview: true
+    menu: true
+    footer: "MTGÁS · Operação & Manutenção · Reunião Semanal"
+    include-after-body: scripts/include.html
+
+execute:
+  echo: false
+  warning: false
