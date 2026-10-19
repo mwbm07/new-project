@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "week": "SEMANA 43 · 2026",
+    "period": "19 a 23 de outubro de 2026",
+    "facilitator": "Coordenação de O&M",
+    "dataStatus": "MODELO · DADOS DE EXEMPLO"
+  },
+  "safety": {
+    "theme": "Intervenção segura em instalações de gás natural",
+    "description": "Reforçar a análise prévia da atividade, isolamento da área, controle de fontes de ignição, comunicação entre a equipe e verificação das condições antes da liberação do serviço.",
+    "keyMessage": "nenhuma atividade operacional deve avançar quando as condições reais divergirem do planejamento ou da APR.",
+    "alerts": [
+      "Confirmar APR/PT e papéis da equipe antes da mobilização.",
+      "Verificar detector de gás, EPIs e ferramentas aplicáveis à tarefa.",
+      "Interromper o serviço diante de condição não prevista ou mudança de cenário."
+    ],
+    "metrics": {"accidents": 0, "incidents": 0, "nearMisses": 1, "unsafeConditions": 2}
+  },
+  "previous": {
+    "programmed": 12,
+    "completed": 9,
+    "rescheduled": 3,
+    "compliance": 75,
+    "activities": [
+      {"activity":"Patrol operacional da RDGN","asset":"Distrito Industrial","owner":"Equipe O&M","status":"Concluído","note":"Sem anomalia crítica"},
+      {"activity":"Inspeção funcional de CRM","asset":"CRM Cliente 01","owner":"Equipe O&M","status":"Concluído","note":"Registro atualizado"},
+      {"activity":"Calibração de instrumento","asset":"City Gate","owner":"Contratada","status":"Reprogramado","note":"Aguardar mobilização"},
+      {"activity":"Verificação do sistema de odorização","asset":"City Gate","owner":"Equipe O&M","status":"Concluído","note":"Operação normal"}
+    ]
+  },
+  "anomalies": [
+    {"priority":"P2","description":"Oscilação intermitente de leitura em instrumento","asset":"CRM Cliente 02","status":"Em análise","nextAction":"Validar sinal e conexões","owner":"Instrumentação"},
+    {"priority":"P3","description":"Sinalização de campo requer recomposição","asset":"Trecho RDGN","status":"Programado","nextAction":"Substituir placa","owner":"Equipe O&M"},
+    {"priority":"P4","description":"Ajuste de identificação de ativo","asset":"City Gate","status":"Aberto","nextAction":"Atualizar TAG","owner":"O&M"}
+  ],
+  "schedule": [
+    {"date":"19/10","activity":"Reunião semanal e DDS","type":"Planejamento","asset":"Base Operacional","owner":"Equipe O&M","status":"Planejado","critical":false},
+    {"date":"20/10","activity":"Patrol e inspeção visual","type":"Inspeção","asset":"RDGN · trecho programado","owner":"Equipe O&M","status":"Planejado","critical":false},
+    {"date":"21/10","activity":"Verificação de CRM","type":"Preventiva","asset":"CRM Cliente 02","owner":"Equipe O&M","status":"Planejado","critical":true},
+    {"date":"22/10","activity":"Acompanhamento de calibração","type":"Calibração","asset":"City Gate","owner":"Fiscalização / Contratada","status":"Agendado","critical":true},
+    {"date":"23/10","activity":"Tratamento de pendências de campo","type":"Corretiva","asset":"SDGN","owner":"Equipe O&M","status":"Planejado","critical":false}
+  ],
+  "maintenance": {
+    "preventiveOverdue": 0,
+    "calibrationOverdue": 0,
+    "due30": 3,
+    "inspections": 4,
+    "items": [
+      {"asset":"Transmissor PT-XXX","service":"Calibração","due":"Out/2026","status":"Agendado","owner":"Contratada"},
+      {"asset":"CRM Cliente 02","service":"Inspeção preventiva","due":"21/10/2026","status":"Planejado","owner":"Equipe O&M"},
+      {"asset":"Sistema de odorização","service":"Inspeção funcional","due":"23/10/2026","status":"Planejado","owner":"Equipe O&M"}
+    ]
+  },
+  "materials": [
+    {"item":"Elemento filtrante","need":"Reserva para preventiva","status":"Disponível"},
+    {"item":"Kit de vedação","need":"Estoque mínimo","status":"Verificar saldo"},
+    {"item":"Manômetro sobressalente","need":"Contingência","status":"Em aquisição"}
+  ],
+  "thirdParty": [
+    {"demand":"Calibração de instrumentos","nextAction":"Confirmar mobilização","owner":"Fiscal do contrato"},
+    {"demand":"Serviço especializado de manutenção","nextAction":"Validar escopo / OS","owner":"Engenharia"}
+  ],
+  "lookAhead": {
+    "d30":["Calibrações com vencimento no período.","Reposição de sobressalentes de instrumentação.","Fechamento das anomalias P2/P3 em aberto."],
+    "d60":["Revisão do plano de preventivas dos CRMs.","Programação de serviços especializados e contratos.","Avaliação do estoque mínimo de spare parts críticos."],
+    "d90":["Consolidar programação trimestral de manutenção.","Revisar necessidades de aquisição para o próximo ciclo.","Avaliar tendências de falha e recorrência de anomalias."]
+  },
+  "indicators": {"availability": 99.8, "weekFocus": "concluir as ações de maior criticidade sem gerar backlog de preventivas e calibrações."},
+  "actions": [
+    {"id":"01","action":"Confirmar mobilização para calibração","owner":"Fiscal do contrato","due":"20/10/2026","priority":"P2","status":"Em andamento"},
+    {"id":"02","action":"Regularizar identificação de ativo em campo","owner":"Equipe O&M","due":"23/10/2026","priority":"P4","status":"Aberto"},
+    {"id":"03","action":"Conferir saldo de kits de vedação","owner":"Almoxarifado / O&M","due":"22/10/2026","priority":"P3","status":"Aberto"}
+  ],
+  "closing": {"nextMeetingDate":"26 de outubro de 2026","nextMeetingTime":"08:00 · horário de Cuiabá","location":"Base Operacional / sala de reunião"}
+}
