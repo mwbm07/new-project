@@ -1,7 +1,6 @@
 ---
-title: "Reunião Semanal de O&M"
-subtitle: "Companhia Mato-Grossense de Gás – MTGÁS"
 lang: pt-BR
+pagetitle: "Reunião Semanal de O&M – MTGÁS"
 format:
   revealjs:
     title-slide: false
@@ -9,35 +8,69 @@ format:
 
 ## {#capa .hero-slide}
 
-<div class="hero-brand"><img src="https://mtgas.com.br/wp-content/uploads/2026/06/LOGO-SVG.svg" alt="MTGÁS"></div>
-
-<div class="hero-grid">
-  <div>
-    <div class="eyebrow">Reunião semanal · Operação &amp; Manutenção</div>
-    <div class="pill pill-amber" style="margin-bottom:18px" data-bind="meta.dataStatus">—</div>
-    <div class="hero-title">Segurança.<br>Execução.<br>Próximos passos.</div>
-    <div class="hero-subtitle">Ritual semanal para alinhar a equipe, tratar riscos, acompanhar a execução e antecipar as demandas do Sistema de Distribuição de Gás Natural.</div>
+```{=html}
+<div class="cover-shell">
+  <div class="cover-logo-panel">
+    <img class="cover-logo" src="https://mtgas.com.br/wp-content/uploads/2026/06/LOGO-SVG.svg" alt="Companhia Mato-Grossense de Gás – MTGÁS">
   </div>
-  <div class="hero-side">
-    <div class="hero-info"><div class="label">Semana</div><div class="value" data-bind="meta.week">—</div></div>
-    <div class="hero-info"><div class="label">Período</div><div class="value" data-bind="meta.period">—</div></div>
-    <div class="hero-info"><div class="label">Condução</div><div class="value" data-bind="meta.facilitator">—</div></div>
+
+  <div class="cover-content">
+    <div class="cover-kicker">OPERAÇÃO &amp; MANUTENÇÃO</div>
+    <div class="cover-title">Reunião Semanal<br>de O&amp;M</div>
+    <div class="cover-subtitle">Segurança · execução · próximos passos</div>
+  </div>
+
+  <div class="cover-meta-grid">
+    <div class="cover-meta-item">
+      <div class="label">Semana</div>
+      <div class="value" data-bind="meta.week">—</div>
+    </div>
+    <div class="cover-meta-item">
+      <div class="label">Período</div>
+      <div class="value" data-bind="meta.period">—</div>
+    </div>
+    <div class="cover-meta-item">
+      <div class="label">Condução</div>
+      <div class="value" data-bind="meta.facilitator">—</div>
+    </div>
   </div>
 </div>
+```
 
 ## {#seguranca}
 
-<div class="deck-header"><div class="brand-lockup"><img src="https://mtgas.com.br/wp-content/uploads/2026/06/LOGO-SVG.svg" alt="MTGÁS"></div><div class="header-meta"><div class="week" data-bind="meta.week">—</div><div class="period" data-bind="meta.period">—</div></div></div>
-<div class="section-title"><div><div class="section-kicker">01 · Segurança</div><h2>Conversa de segurança</h2></div><div class="line"></div></div>
+```{=html}
+<div class="deck-header">
+  <div class="brand-lockup"><img src="https://mtgas.com.br/wp-content/uploads/2026/06/LOGO-SVG.svg" alt="MTGÁS"></div>
+  <div class="header-meta">
+    <div class="week" data-bind="meta.week">—</div>
+    <div class="period" data-bind="meta.period">—</div>
+  </div>
+</div>
+
+<div class="section-title">
+  <div>
+    <div class="section-kicker">01 · Segurança</div>
+    <h2>Conversa de segurança</h2>
+  </div>
+  <div class="line"></div>
+</div>
 
 <div class="safety-hero">
   <div class="safety-theme">
     <div class="section-kicker">Tema da semana</div>
     <div class="big" data-bind="safety.theme">—</div>
     <div class="desc" data-bind="safety.description">—</div>
-    <div class="callout mt-22"><strong>Mensagem-chave:</strong> <span data-bind="safety.keyMessage">—</span></div>
+    <div class="callout mt-18"><strong>Mensagem-chave:</strong> <span data-bind="safety.keyMessage">—</span></div>
   </div>
-  <div class="card"><div class="card-title"><h3>Alertas para a semana</h3><small>Antes de iniciar as atividades</small></div><ul class="alert-list" id="safety-alerts"></ul></div>
+
+  <div class="card">
+    <div class="card-title">
+      <h3>Alertas para a semana</h3>
+      <small>Antes de iniciar as atividades</small>
+    </div>
+    <ul class="alert-list" id="safety-alerts"></ul>
+  </div>
 </div>
 
 <div class="grid grid-4 mt-18">
@@ -46,108 +79,188 @@ format:
   <div class="metric-card warn"><div class="metric-label">Quase acidentes</div><div class="metric-value" data-bind="safety.metrics.nearMisses">0</div><div class="metric-note">para aprendizado</div></div>
   <div class="metric-card info"><div class="metric-label">Condições inseguras</div><div class="metric-value" data-bind="safety.metrics.unsafeConditions">0</div><div class="metric-note">identificadas</div></div>
 </div>
+```
 
-## {#execucao-planejamento}
+## {#execucao}
 
-<div class="deck-header"><div class="brand-lockup"><img src="https://mtgas.com.br/wp-content/uploads/2026/06/LOGO-SVG.svg" alt="MTGÁS"></div><div class="header-meta"><div class="week" data-bind="meta.week">—</div><div class="period" data-bind="meta.period">—</div></div></div>
-<div class="section-title"><div><div class="section-kicker">02 · Execução e planejamento</div><h2>Semana anterior e programação da semana</h2></div><div class="line"></div></div>
+```{=html}
+<div class="deck-header">
+  <div class="brand-lockup"><img src="https://mtgas.com.br/wp-content/uploads/2026/06/LOGO-SVG.svg" alt="MTGÁS"></div>
+  <div class="header-meta">
+    <div class="week" data-bind="meta.week">—</div>
+    <div class="period" data-bind="meta.period">—</div>
+  </div>
+</div>
 
-<div class="grid grid-4">
-  <div class="metric-card info"><div class="metric-label">Programadas</div><div class="metric-value" data-bind="previous.programmed">—</div><div class="metric-note">última semana</div></div>
-  <div class="metric-card good"><div class="metric-label">Concluídas</div><div class="metric-value" data-bind="previous.completed">—</div><div class="metric-note">última semana</div></div>
-  <div class="metric-card warn"><div class="metric-label">Reprogramadas</div><div class="metric-value" data-bind="previous.rescheduled">—</div><div class="metric-note">última semana</div></div>
+<div class="section-title">
+  <div>
+    <div class="section-kicker">02 · Execução e planejamento</div>
+    <h2>Semana anterior e programação da semana</h2>
+  </div>
+  <div class="line"></div>
+</div>
+
+<div class="grid grid-4 compact-metrics">
+  <div class="metric-card info"><div class="metric-label">Programadas</div><div class="metric-value" data-bind="previous.programmed">—</div><div class="metric-note">semana anterior</div></div>
+  <div class="metric-card good"><div class="metric-label">Concluídas</div><div class="metric-value" data-bind="previous.completed">—</div><div class="metric-note">semana anterior</div></div>
+  <div class="metric-card warn"><div class="metric-label">Reprogramadas</div><div class="metric-value" data-bind="previous.rescheduled">—</div><div class="metric-note">semana anterior</div></div>
   <div class="metric-card good"><div class="metric-label">Cumprimento</div><div class="metric-value"><span data-bind="previous.compliance">—</span>%</div><div class="metric-note">planejado × realizado</div></div>
 </div>
 
-<div class="grid grid-2 mt-18">
-  <div class="card progress-block">
-    <div class="card-title"><h3>Execução da semana anterior</h3><small>Resultado consolidado</small></div>
-    <div class="progress-label"><span>Avanço da programação semanal</span><strong><span data-bind="previous.compliance">—</span>%</strong></div>
+<div class="execution-layout mt-16">
+  <div class="card progress-card">
+    <div class="card-title"><h3>Resultado da semana anterior</h3><small>Resumo executivo</small></div>
+    <div class="progress-label"><span>Cumprimento da programação</span><strong><span data-bind="previous.compliance">—</span>%</strong></div>
     <div class="bar"><span id="previous-progress"></span></div>
-    <div class="table-wrap mt-18"><table class="om-table"><thead><tr><th>Atividade</th><th>Ativo / Local</th><th>Responsável</th><th>Situação</th><th>Observação</th></tr></thead><tbody id="previous-table"></tbody></table></div>
+    <div class="callout mt-18"><strong>Leitura:</strong> revisar apenas desvios, reprogramações e atividades que demandem decisão da equipe.</div>
   </div>
 
-  <div class="card">
-    <div class="card-title"><h3>Programação da semana</h3><small>Prioridades e execução</small></div>
-    <div class="grid grid-3">
-      <div class="metric-card info"><div class="metric-label">Planejadas</div><div class="metric-value" id="schedule-total">0</div><div class="metric-note">atividades da semana</div></div>
-      <div class="metric-card warn"><div class="metric-label">Críticas</div><div class="metric-value" id="schedule-critical">0</div><div class="metric-note">atenção adicional</div></div>
-      <div class="metric-card good"><div class="metric-label">Com responsável</div><div class="metric-value" id="schedule-owned">0</div><div class="metric-note">responsabilidade definida</div></div>
-    </div>
-    <div class="table-wrap mt-18"><table class="om-table"><thead><tr><th>Data</th><th>Atividade</th><th>Tipo</th><th>Ativo / Local</th><th>Responsável</th><th>Status</th></tr></thead><tbody id="schedule-table"></tbody></table></div>
+  <div class="schedule-summary">
+    <div class="mini-stat"><span>Planejadas</span><b id="schedule-total">0</b></div>
+    <div class="mini-stat warn"><span>Críticas</span><b id="schedule-critical">0</b></div>
+    <div class="mini-stat good"><span>Com responsável</span><b id="schedule-owned">0</b></div>
   </div>
 </div>
 
-## {#integridade-confiabilidade}
+<div class="table-heading mt-16"><strong>Programação da semana</strong><span>Atividades, responsáveis e situação</span></div>
+<div class="table-wrap">
+  <table class="om-table">
+    <thead><tr><th>Data</th><th>Atividade</th><th>Tipo</th><th>Ativo / Local</th><th>Responsável</th><th>Status</th></tr></thead>
+    <tbody id="schedule-table"></tbody>
+  </table>
+</div>
+```
 
-<div class="deck-header"><div class="brand-lockup"><img src="https://mtgas.com.br/wp-content/uploads/2026/06/LOGO-SVG.svg" alt="MTGÁS"></div><div class="header-meta"><div class="week" data-bind="meta.week">—</div><div class="period" data-bind="meta.period">—</div></div></div>
-<div class="section-title"><div><div class="section-kicker">03 · Integridade e confiabilidade</div><h2>Ocorrências, anomalias e manutenção</h2></div><div class="line"></div></div>
+## {#integridade}
 
-<div class="grid grid-4">
+```{=html}
+<div class="deck-header">
+  <div class="brand-lockup"><img src="https://mtgas.com.br/wp-content/uploads/2026/06/LOGO-SVG.svg" alt="MTGÁS"></div>
+  <div class="header-meta">
+    <div class="week" data-bind="meta.week">—</div>
+    <div class="period" data-bind="meta.period">—</div>
+  </div>
+</div>
+
+<div class="section-title">
+  <div>
+    <div class="section-kicker">03 · Integridade e confiabilidade</div>
+    <h2>Anomalias, preventivas e calibrações</h2>
+  </div>
+  <div class="line"></div>
+</div>
+
+<div class="grid grid-4 compact-metrics">
   <div class="metric-card danger"><div class="metric-label">P1 · Crítica</div><div class="metric-value" id="count-p1">0</div><div class="metric-note">ação imediata</div></div>
   <div class="metric-card warn"><div class="metric-label">P2 · Alta</div><div class="metric-value" id="count-p2">0</div><div class="metric-note">prioridade</div></div>
-  <div class="metric-card good"><div class="metric-label">P3 · Moderada</div><div class="metric-value" id="count-p3">0</div><div class="metric-note">programável</div></div>
-  <div class="metric-card info"><div class="metric-label">P4 · Baixa</div><div class="metric-value" id="count-p4">0</div><div class="metric-note">acompanhamento</div></div>
+  <div class="metric-card good"><div class="metric-label">Preventivas vencidas</div><div class="metric-value" data-bind="maintenance.preventiveOverdue">0</div><div class="metric-note">backlog</div></div>
+  <div class="metric-card info"><div class="metric-label">Vencem em 30 dias</div><div class="metric-value" data-bind="maintenance.due30">0</div><div class="metric-note">planejar recursos</div></div>
 </div>
 
-<div class="grid grid-2 mt-18">
-  <div class="card">
-    <div class="card-title"><h3>Ocorrências e anomalias</h3><small>Prioridades em aberto</small></div>
-    <div class="table-wrap"><table class="om-table"><thead><tr><th>Pri.</th><th>Ocorrência / Anomalia</th><th>Ativo / Local</th><th>Situação atual</th><th>Próxima ação</th><th>Responsável</th></tr></thead><tbody id="anomaly-table"></tbody></table></div>
-  </div>
-  <div class="card">
-    <div class="card-title"><h3>Preventivas, calibrações e inspeções</h3><small>Backlog e agenda</small></div>
-    <div class="grid grid-4">
-      <div class="metric-card good"><div class="metric-label">Preventivas vencidas</div><div class="metric-value" data-bind="maintenance.preventiveOverdue">0</div><div class="metric-note">backlog vencido</div></div>
-      <div class="metric-card good"><div class="metric-label">Calibrações vencidas</div><div class="metric-value" data-bind="maintenance.calibrationOverdue">0</div><div class="metric-note">instrumentação</div></div>
-      <div class="metric-card info"><div class="metric-label">Vencem em 30 dias</div><div class="metric-value" data-bind="maintenance.due30">0</div><div class="metric-note">planejar recursos</div></div>
-      <div class="metric-card info"><div class="metric-label">Inspeções previstas</div><div class="metric-value" data-bind="maintenance.inspections">0</div><div class="metric-note">semana atual</div></div>
+<div class="dual-tables mt-16">
+  <div>
+    <div class="table-heading"><strong>Ocorrências e anomalias</strong></div>
+    <div class="table-wrap">
+      <table class="om-table dense">
+        <thead><tr><th>Pri.</th><th>Ocorrência</th><th>Ativo</th><th>Situação</th><th>Próxima ação</th><th>Responsável</th></tr></thead>
+        <tbody id="anomaly-table"></tbody>
+      </table>
     </div>
-    <div class="table-wrap mt-18"><table class="om-table"><thead><tr><th>Ativo / Equipamento</th><th>Serviço</th><th>Prazo</th><th>Situação</th><th>Responsável</th></tr></thead><tbody id="maintenance-table"></tbody></table></div>
+  </div>
+
+  <div>
+    <div class="table-heading"><strong>Manutenção e calibração</strong></div>
+    <div class="table-wrap">
+      <table class="om-table dense">
+        <thead><tr><th>Ativo</th><th>Serviço</th><th>Prazo</th><th>Situação</th><th>Responsável</th></tr></thead>
+        <tbody id="maintenance-table"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+```
+
+## {#recursos}
+
+```{=html}
+<div class="deck-header">
+  <div class="brand-lockup"><img src="https://mtgas.com.br/wp-content/uploads/2026/06/LOGO-SVG.svg" alt="MTGÁS"></div>
+  <div class="header-meta">
+    <div class="week" data-bind="meta.week">—</div>
+    <div class="period" data-bind="meta.period">—</div>
   </div>
 </div>
 
-## {#recursos-lookahead}
-
-<div class="deck-header"><div class="brand-lockup"><img src="https://mtgas.com.br/wp-content/uploads/2026/06/LOGO-SVG.svg" alt="MTGÁS"></div><div class="header-meta"><div class="week" data-bind="meta.week">—</div><div class="period" data-bind="meta.period">—</div></div></div>
-<div class="section-title"><div><div class="section-kicker">04 · Recursos e antecipação</div><h2>Materiais, terceiros e Look Ahead</h2></div><div class="line"></div></div>
-
-<div class="grid grid-2">
-  <div class="card"><div class="card-title"><h3>Sobressalentes / materiais</h3><small>Itens que podem limitar a execução</small></div><div class="table-wrap"><table class="om-table"><thead><tr><th>Item</th><th>Necessidade</th><th>Situação</th></tr></thead><tbody id="materials-table"></tbody></table></div></div>
-  <div class="card"><div class="card-title"><h3>Serviços de terceiros</h3><small>Contratos, OS e mobilizações</small></div><div class="table-wrap"><table class="om-table"><thead><tr><th>Demanda</th><th>Próxima ação</th><th>Responsável</th></tr></thead><tbody id="thirdparty-table"></tbody></table></div></div>
+<div class="section-title">
+  <div>
+    <div class="section-kicker">04 · Recursos e antecipação</div>
+    <h2>Materiais, terceiros e Look Ahead</h2>
+  </div>
+  <div class="line"></div>
 </div>
 
-<div class="lookahead mt-18">
+<div class="grid grid-2 resource-grid">
+  <div class="card">
+    <div class="card-title"><h3>Sobressalentes e materiais</h3><small>Itens que podem limitar a execução</small></div>
+    <div class="table-wrap">
+      <table class="om-table dense">
+        <thead><tr><th>Item</th><th>Necessidade</th><th>Situação</th></tr></thead>
+        <tbody id="materials-table"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><h3>Serviços de terceiros</h3><small>Contratos, OS e mobilizações</small></div>
+    <div class="table-wrap">
+      <table class="om-table dense">
+        <thead><tr><th>Demanda</th><th>Próxima ação</th><th>Responsável</th></tr></thead>
+        <tbody id="thirdparty-table"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="lookahead compact-lookahead mt-16">
   <div class="look-card"><div class="days">Próximos</div><div class="horizon">30 dias</div><ul class="look-list" id="look-30"></ul></div>
   <div class="look-card"><div class="days">Horizonte</div><div class="horizon">60 dias</div><ul class="look-list" id="look-60"></ul></div>
   <div class="look-card"><div class="days">Horizonte</div><div class="horizon">90 dias</div><ul class="look-list" id="look-90"></ul></div>
 </div>
+```
 
-## {#gestao-compromissos}
+## {#gestao}
 
-<div class="deck-header"><div class="brand-lockup"><img src="https://mtgas.com.br/wp-content/uploads/2026/06/LOGO-SVG.svg" alt="MTGÁS"></div><div class="header-meta"><div class="week" data-bind="meta.week">—</div><div class="period" data-bind="meta.period">—</div></div></div>
-<div class="section-title"><div><div class="section-kicker">05 · Gestão e compromissos</div><h2>Painel O&amp;M e plano de ação</h2></div><div class="line"></div></div>
+```{=html}
+<div class="deck-header">
+  <div class="brand-lockup"><img src="https://mtgas.com.br/wp-content/uploads/2026/06/LOGO-SVG.svg" alt="MTGÁS"></div>
+  <div class="header-meta">
+    <div class="week" data-bind="meta.week">—</div>
+    <div class="period" data-bind="meta.period">—</div>
+  </div>
+</div>
 
-<div class="grid grid-4">
+<div class="section-title">
+  <div>
+    <div class="section-kicker">05 · Gestão e compromissos</div>
+    <h2>Painel O&amp;M e plano de ação</h2>
+  </div>
+  <div class="line"></div>
+</div>
+
+<div class="grid grid-4 compact-metrics">
   <div class="metric-card good"><div class="metric-label">Disponibilidade</div><div class="metric-value"><span data-bind="indicators.availability">—</span>%</div><div class="metric-note">sistema / período</div></div>
   <div class="metric-card good"><div class="metric-label">Cumprimento semanal</div><div class="metric-value"><span data-bind="previous.compliance">—</span>%</div><div class="metric-note">programação</div></div>
   <div class="metric-card warn"><div class="metric-label">Anomalias abertas</div><div class="metric-value" id="anomalies-open">0</div><div class="metric-note">todas as prioridades</div></div>
   <div class="metric-card danger"><div class="metric-label">P1 + P2</div><div class="metric-value" id="high-priority-open">0</div><div class="metric-note">atenção gerencial</div></div>
 </div>
 
-<div class="grid grid-2 mt-18">
-  <div class="card progress-block">
-    <div class="card-title"><h3>Painel O&amp;M</h3><small>Indicadores da semana</small></div>
-    <div class="progress-label"><span>Programação executada</span><strong><span data-bind="previous.compliance">—</span>%</strong></div>
-    <div class="bar"><span id="indicator-compliance"></span></div>
-    <div class="progress-label mt-18"><span>Disponibilidade operacional</span><strong><span data-bind="indicators.availability">—</span>%</strong></div>
-    <div class="bar"><span id="indicator-availability"></span></div>
-    <div class="callout mt-18"><strong>Foco da semana:</strong> <span data-bind="indicators.weekFocus">—</span></div>
-  </div>
+<div class="callout focus-callout mt-16"><strong>Foco da semana:</strong> <span data-bind="indicators.weekFocus">—</span></div>
 
-  <div class="card">
-    <div class="card-title"><h3>Pendências e plano de ação</h3><small>Acompanhar até conclusão</small></div>
-    <div class="table-wrap"><table class="om-table"><thead><tr><th>#</th><th>Pendência / Ação</th><th>Responsável</th><th>Prazo</th><th>Prioridade</th><th>Status</th></tr></thead><tbody id="actions-table"></tbody></table></div>
-    <div class="callout mt-18"><strong>Regra:</strong> toda ação aberta permanece no quadro semanal até sua conclusão ou reprogramação formal.</div>
-  </div>
+<div class="table-heading mt-16"><strong>Pendências e plano de ação</strong><span>Manter no quadro até conclusão ou reprogramação formal</span></div>
+<div class="table-wrap">
+  <table class="om-table">
+    <thead><tr><th>#</th><th>Pendência / Ação</th><th>Responsável</th><th>Prazo</th><th>Prioridade</th><th>Status</th></tr></thead>
+    <tbody id="actions-table"></tbody>
+  </table>
 </div>
+```
